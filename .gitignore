@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/tfsprod/obj/Debug/tfsprod_MarkupCompile.lref
+/tfsprod/obj/Debug/tfsprod_MarkupCompile.i.lref
+/tfsprod/obj/Debug/tfsprod_MarkupCompile.i.cache
+/tfsprod/obj/Debug/tfsprod_MarkupCompile.cache
+/tfsprod/obj/Debug/tfsprod.csprojResolveAssemblyReference.cache
+/tfsprod/obj/Debug/tfsprod.csproj.ResolveComReference.cache
+/tfsprod/obj/Debug/tfsprod.csproj.FileListAbsolute.txt
+/tfsprod/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+/tfsprod/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+/tfsprod/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+/tfsprod/obj/Debug/RevisionHistory/WpfRevisionHistoryControl.g.i.cs
+/tfsprod/obj/Debug/RevisionHistory/WpfRevisionHistoryControl.g.cs
+/tfsprod/obj/Debug/RevisionHistory
+/tfsprod/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/tfsprod/obj/Debug/build.force
