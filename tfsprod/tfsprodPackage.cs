@@ -19,6 +19,7 @@ using TFSExt.ShowRevHist;
 
 namespace tfsprod
 {
+    [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\14.0")]
     [PackageRegistration(UseManagedResourcesOnly = true)]
     //[InstalledProductRegistration("#110", "#112", "2.1.0", IconResourceID = 400)]
     [ProvideMenuResource("Menus.ctmenu", 1)]
@@ -28,7 +29,7 @@ namespace tfsprod
     [ProvideToolWindow(typeof(RevisionHistoryPane), MultiInstances = false, Style = VsDockStyle.Tabbed, PositionX = 0, PositionY = 0, Width = 900, Height = 750, Transient = true,
         Orientation = ToolWindowOrientation.Left, Window = EnvDTE.Constants.vsWindowKindMainWindow)]
     [ProvideOptionPage(typeof(OptionPageGrid), "TFS Productivity Tools", "General", 0, 0, true)]
-    //[ProvideAutoLoad("f1536ef8-92ec-443c-9ed7-fdadf150da82")]
+    [ProvideAutoLoad(UIContextGuids80.SolutionExists)]
     [Guid(GuidList.guidtfsprodPkgString)]
     public sealed class tfsprodPackage : Package
     {

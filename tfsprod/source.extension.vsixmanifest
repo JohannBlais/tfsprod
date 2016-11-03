@@ -18,5 +18,7 @@
     <Dependency Id="Microsoft.VisualStudio.MPF.11.0" DisplayName="Visual Studio MPF 11.0" d:Source="Installed" Version="11.0" />
   </Dependencies>
   <Assets>
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="File" Path="Microsoft.WITDataStore32.dll" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="File" Path="Microsoft.WITDataStore64.dll" />
   </Assets>
 </PackageManifest>

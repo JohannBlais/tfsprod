@@ -259,14 +259,14 @@ namespace tfsprod
                 Type type = asm.GetType("Microsoft.TeamFoundation.WorkItemTracking.Controls.WorkItemPickerDialog");
                 var inst = type.GetConstructor(new[] { typeof(WorkItemStore) }).Invoke(new[] { wistore });
                 type.GetProperty("PortfolioDisplayName").SetValue(inst, vsTeamCtxMan.CurrentContext.TeamProjectName);
-                
+
                 var res = (DialogResult)type.GetMethod("ShowDialog", new Type[0]).Invoke(inst, null);
                 if (res == DialogResult.OK)
                 {
                     var selworkitems = (List<WorkItem>)type.GetMethod("SelectedWorkItems", new Type[0]).Invoke(inst, null);
                     return selworkitems;
                 }
-                
+
                 return null;
 
                 //var dlg = new LinkDialogRelatedLinkControl();

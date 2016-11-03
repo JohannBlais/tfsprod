@@ -192,8 +192,8 @@ namespace TFSExp.ExtendedMerge
             int idx = 0;
             bool bcanceled = false;
             int icanceled;
-            var dlg = Utilities.CreateThreadedWaitDialog("Merging changesets", "Stating changesets merge...", "status", 100);
-            ErrorHandler.ThrowOnFailure(dlg.UpdateProgress("Merging changesets", "Stating changesets merge...", "status", idx++, 100, false, out bcanceled));
+            var dlg = Utilities.CreateThreadedWaitDialog("Merging changesets", "Starting changesets merge...", "status", 100);
+            ErrorHandler.ThrowOnFailure(dlg.UpdateProgress("Merging changesets", "Starting changesets merge...", "status", idx++, 100, false, out bcanceled));
             if (bcanceled) return;
 
             foreach (var lvItem in lvcoll)
@@ -207,7 +207,10 @@ namespace TFSExp.ExtendedMerge
                 if (LinkWorkItems)
                 {
                     foreach (var workItm in ch.WorkItems)
+                    {
+                        // TODO: Add work items to the associated works items in the Team Explorer pending changes page.
                         Utilities.OutputCommandString("Associated WorkItem: " + workItm.Id);
+                    }
                 }
 
                 ErrorHandler.ThrowOnFailure(dlg.UpdateProgress("Merging changesets", "Merging changeset: " + ch.ChangesetId, "status", idx++, 100, false, out bcanceled));
